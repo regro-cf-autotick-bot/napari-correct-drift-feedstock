@@ -1,5 +1,5 @@
 {% set name = "napari-correct-drift" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-correct-drift-{{ version }}.tar.gz
-  sha256: 9321c7c253f8534001eb7210e5577184f87fe1e7daa41ee62914fe30b4cf14e5
+  sha256: 7e66c11bf837851057e72d3ce5dea22847592be9c8098931da3029507f60ccbb
 
 build:
   noarch: python
