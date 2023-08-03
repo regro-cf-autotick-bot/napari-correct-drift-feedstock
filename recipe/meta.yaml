@@ -1,5 +1,5 @@
 {% set name = "napari-correct-drift" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-correct-drift-{{ version }}.tar.gz
-  sha256: 9321c7c253f8534001eb7210e5577184f87fe1e7daa41ee62914fe30b4cf14e5
+  sha256: 7e66c11bf837851057e72d3ce5dea22847592be9c8098931da3029507f60ccbb
 
 build:
   noarch: python
@@ -19,9 +19,10 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - magicgui
+    # - magicgui  # Declared but unused
     - napari
     - numpy
+    - pandas  # Not declared but used
     - python >=3.8
     - qtpy
     - scikit-image
@@ -38,10 +39,11 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/sommerc/napari-correct-drift
+  home: https://pypi.org/project/napari-correct-drift
   summary: Drift correction 2D/3D for Napari similar to Fijis Correct 3D drift
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/sommerc/napari-correct-drift
 
 extra:
   recipe-maintainers:
