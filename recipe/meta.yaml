@@ -19,10 +19,10 @@ requirements:
     - pip
     - python >=3.8
   run:
-    # - magicgui  # Declared but unused
+    - dask-core
     - napari
     - numpy
-    - pandas  # Not declared but used
+    - pandas
     - python >=3.8
     - qtpy
     - scikit-image
