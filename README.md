@@ -3,11 +3,13 @@ About napari-correct-drift-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-correct-drift-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/sommerc/napari-correct-drift
+Home: https://pypi.org/project/napari-correct-drift
 
 Package license: BSD-3-Clause
 
 Summary: Drift correction 2D/3D for Napari similar to Fijis Correct 3D drift
+
+Development: https://github.com/sommerc/napari-correct-drift
 
 Current build status
 ====================
