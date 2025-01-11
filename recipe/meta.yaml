@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-correct-drift-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-correct-drift-{{ version }}.tar.gz
   sha256: a3d3f1094ba9691e1e581446a8aa2c49824b8dc8430425d2dd4a885c333538ba
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - dask-core
     - napari
     - numpy
     - pandas
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     - scikit-image
     - scipy
@@ -37,6 +37,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-correct-drift
